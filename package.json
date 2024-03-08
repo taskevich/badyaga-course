@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --progress --watch",
-    "dev": "npx webpack serve --mode development --open"
+    "dev": "npx webpack serve --mode production --open"
   },
   "keywords": [],
   "author": "",
