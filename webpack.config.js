@@ -8,7 +8,7 @@ pages.map((page) => {
     plugins.push(
         new HtmlWebpackPlugin({
             inject: true,
-            template: __dirname + `/src/${page}.html`,
+            template: path.resolve(__dirname, `src/${page}.html`),
             filename: `${page}.html`,
             chunks: [page],
         })
@@ -17,7 +17,7 @@ pages.map((page) => {
 
 module.exports = {
     entry: pages.reduce((config, page) => {
-        config[page] = __dirname + `/src/${page}.js`;
+        config[page] = path.resolve(__dirname, `src/${page}.js`);
         return config;
     }, {}),
     output: {
