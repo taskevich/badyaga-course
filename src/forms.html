@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Формы</title>
+</head>
+    <body>
+        <div class="container">
+            <div class="forms">
+                <div class="form_one">
+                    <h1>Форма авторизации</h1>
+                    <form method="post">
+                        <div class="form-item">
+                            <input type="text" name="username" id="username" placeholder="username">
+                        </div>
+                        <div class="form-item">
+                            <input type="text" name="password" id="password" placeholder="password">
+                        </div>
+                        <div class="form-item">
+                            <button>Войти</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="form_two">
+                    <h1>Форма заявки</h1>
+                    <form method="post">
+                        <div class="form-item">
+                            <input type="text" name="messageName" id="messageName" placeholder="message name">
+                        </div>
+                        <div class="form-item">
+                            <textarea name="messageText" id="messageText"></textarea>
+                        </div>
+                        <div class="form-item">
+                            <button>Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+        <script src="./forms.js"></script>
+    </body>
+</html>

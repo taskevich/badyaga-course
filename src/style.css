@@ -19,9 +19,29 @@
     height: 800px;
 }
 
+.container .pages {
+    width: 20%;
+    display: flex;
+    font-size: 18px;
+    justify-content: space-between;
+    padding: 1%;
+}
+
+.container .pages a {
+    color: black !important;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.container .pages a:hover {
+    color: blueviolet !important;
+    transition: 0.2s;
+    text-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
 .card {
     font-size: 18px;
-    color: white !important;
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,8 +55,7 @@
 }
 
 .card p, a {
-    color: white !important;
-    width: 280px; 
+    color: white; 
     text-align: center;
 }
 

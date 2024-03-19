@@ -1,19 +1,35 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtratPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 
+const pages = ["index", "forms", "grids"];
+
+const plugins = [];
+pages.map((page) => {
+    plugins.push(
+        new HtmlWebpackPlugin({
+            inject: true,
+            template: __dirname + `/src/${page}.html`,
+            filename: `${page}.html`,
+            chunks: [page],
+        })
+    );
+});
+
 module.exports = {
-    entry: "./src/index.js",
+    entry: pages.reduce((config, page) => {
+        config[page] = __dirname + `/src/${page}.js`;
+        return config;
+    }, {}),
     output: {
-        filename: "bundle.js",
+        filename: "[name].js",
         path: path.resolve(__dirname, "dist"),
     },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: __dirname + "/src/index.html",
-        }),
-        new MiniCssExtratPlugin(),
-    ],
+    optimization: {
+        splitChunks: {
+            chunks: "all",
+        },
+    },
+    plugins: plugins,
     module: {
         rules: [
             {

@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-item {
+    width: 500px;
+    height: 100%;
+    margin-top: 2%;
+}
+
+.form-item input, button, textarea {
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    padding: 5%;
+}
+
+.form-item textarea {
+    resize: vertical;
+}
+
+button {
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid rgb(252,176,69);
+    background: rgb(252,176,69);
+    background: linear-gradient(233deg, rgba(252,176,69,1) 0%, rgba(253,29,29,1) 50%, rgba(131,58,180,1) 100%); 
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition: 0.2s;
+    color: #fff;
+}
+
+button:hover {
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid rgba(131,58,180,1);
+    background: rgba(131,58,180,1);
+    color: #fff;
+    transition: 0.2s;
+}
+
+.form_one {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+
+.form_two {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
